@@ -14,6 +14,7 @@ RUN echo "debconf shared/accepted-oracle-license-v1-1 select true" | debconf-set
     apt-get update && \
     apt-get -y install oracle-java8-installer ruby2.3 ruby2.3-dev build-essential && \
     gem install bundler && \
+    gem install fastlane && \
     rm -rf /var/cache/oracle-jdk8-installer && \
     apt-get -y remove software-properties-common python-software-properties && \
     apt-get -y autoremove && \
